@@ -45,7 +45,7 @@
         <footer>
             <div><a href="../../204DWESProyectoDWES/indexProyectoDWES.php"><img style="padding: 0em 1em;" src="webroot/logo_propio.png" alt="logo" id="logo"></a></div>
             2022-23 Manuel Martín Alonso. ©Todos los derechos reservados.
-            <a href="https://github.com/Manuel0119/204DWESLoginLogoff" target="_blank"><img src="webroot/github-logo.png" alt="github" id="g"></a>
+            <a href="https://github.com/Manuel0119/204DWESProyectoFinal" target="_blank"><img src="webroot/github-logo.png" alt="github" id="g"></a>
             <a href="doc/CV - Manuel Martín Alonso.pdf" target="_blank"><img src="webroot/curriculum-logo.png" alt="curriculum" id="curricu"></a>
             <a href="../../204DWESProyectoDWES/indexProyectoDWES.php"><img src="webroot/volver.png" alt="volver" class="volver"/></a>
         </footer>
