@@ -110,6 +110,7 @@ footer p{
 #g{
     width: 4em;
     float: right;
+    height: auto;
 }
 #curricu{
     width: 2em;
