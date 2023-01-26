@@ -96,6 +96,7 @@ footer{
     align-items: center;
     position: fixed;
     bottom: 0;
+    gap: 5px;
 }
 footer p{
     margin: 0;

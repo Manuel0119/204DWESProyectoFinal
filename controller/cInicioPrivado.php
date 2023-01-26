@@ -12,5 +12,11 @@ if(isset($_REQUEST['detalle'])){
     header("Location: index.php"); 
     exit();
 }
+if(isset($_REQUEST['WIP'])){
+    $_SESSION['paginaEnCurso']='wip';
+    $_SESSION['paginaAnterior']='inicioPrivado';
+    header("Location: index.php"); 
+    exit();
+}
 require_once $aVistas['layout'];
 
