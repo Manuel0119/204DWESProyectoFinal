@@ -32,9 +32,10 @@ if (isset($_REQUEST['iniciarSesion'])) {
 //   si no se ha pulsado iniciar sesion le pedimos que muestre el formulario de inicio
     if ($entradaOk) {
         UsuarioPDO::registrarUltimaConexion($oUsuario);
-        $_SESSION['User204DWESLoginLogoff'] = $oUsuario;
+        $_SESSION['User204DWESProyectoFinal'] = $oUsuario;
         $_SESSION['paginaEnCurso'] = 'inicioPrivado';
         header("Location: index.php");
+        exit();
     }
 }
 require_once $aVistas['layout'];

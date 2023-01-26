@@ -4,17 +4,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MMA - App Login-Logoff</title>
-        <link rel="icon" type="image/ico" sizes="32x32" href="webroot/favicon.ico"> 
+        <title>MMA - Proyecto Final</title>
+        <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico"> 
     </head>
     <style>
         body{
             margin: 0;
             padding: 0;
-            height: 90vh;
+            height: 94.2vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            flex-flow: wrap;
+            align-items: flex-start;
         }
         .slider{
             width: 800px;
@@ -156,9 +157,6 @@
             opacity: 1;
             right: 0;
         }
-        form{
-            margin-bottom: 25px;
-        }
     </style>
     <script>
         var totalRadios = 6;
@@ -184,22 +182,22 @@
                 <input type="radio" name="radio-btn" id="radio5">
                 <input type="radio" name="radio-btn" id="radio6">
                 <div class="slide first">
-                    <img src="webroot/Imagen-ArbolNavegacion.PNG" alt="">
+                    <img src="webroot/media/Imagen-ArbolNavegacion.PNG" alt="">
                 </div>
                 <div class="slide">
-                    <img src="webroot/Imagen-DiagramaDeClasesLoginLogoff.PNG" alt="">
+                    <img src="webroot/media/Imagen-DiagramaDeClasesLoginLogoff.PNG" alt="">
                 </div>
                 <div class="slide">
-                    <img src="webroot/Imagen-DiagramaDeClasesMulticapa.PNG" alt="">
+                    <img src="webroot/media/Imagen-DiagramaDeClasesMulticapa.PNG" alt="">
                 </div>
                 <div class="slide">
-                    <img src="webroot/Imagen-FicherosLoginLogoff.PNG" alt="">
+                    <img src="webroot/media/Imagen-FicherosLoginLogoff.PNG" alt="">
                 </div>
                 <div class="slide">
-                    <img src="webroot/Imagen-ModeloFisicoDeDatos.PNG" alt="">
+                    <img src="webroot/media/Imagen-ModeloFisicoDeDatos.PNG" alt="">
                 </div>
                 <div class="slide">
-                    <img src="webroot/Imagen-RelacionDeFicheros.PNG" alt="">
+                    <img src="webroot/media/Imagen-RelacionDeFicheros.PNG" alt="">
                 </div>
                 <div class="navigation-auto">
                     <div class="auto-btn1"></div>

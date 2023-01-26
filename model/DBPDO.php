@@ -12,6 +12,7 @@ class DBPDO implements DB {
             return $consulta;
         } catch (PDOException $exc) {
             header("Location: index.php");
+            exit();
         } finally {
             unset($oPDO);
         }

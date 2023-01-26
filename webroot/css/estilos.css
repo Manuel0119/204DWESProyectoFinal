@@ -96,6 +96,7 @@ footer{
     align-items: center;
     position: fixed;
     bottom: 0;
+    gap: 5px;
 }
 footer p{
     margin: 0;
@@ -110,6 +111,7 @@ footer p{
 #g{
     width: 4em;
     float: right;
+    height: auto;
 }
 #curricu{
     width: 2em;
