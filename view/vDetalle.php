@@ -3,7 +3,7 @@
     <!--
         Autor: Manuel Martín Alonso.
         Utilidad: Este programa consiste en crear una ventana de detalle.
-        Fecha-última-revisión: 19-01-2023.
+        Fecha-última-revisión: 25-01-2023.
     -->
     <head>
         <meta charset="UTF-8">
@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ManuelMartínAlonso</title>
         <link rel="stylesheet" href="webroot/css/estilos.css">
-        <link rel="icon" type="image/ico" sizes="32x32" href="webroot/favicon.ico">
+        <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico">
         <style>
             td {
                 text-align: center;
