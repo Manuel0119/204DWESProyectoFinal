@@ -44,7 +44,6 @@
             }
 
             #numeros {
-                margin-left: 15px;
                 display: flex;
                 align-items: center;
                 align-content: center;
@@ -58,7 +57,7 @@
     <body>
         <header>
             <div class="encabezado-layout">
-                <h1>204DWESLoginLogoff</h1>
+                <h1>204DWESProyectoFinal</h1>
                 <h2>Aplicacion multicapa y orientada a objetos</h2>
             </div>
             <?php require_once $aVistas[$_SESSION['paginaEnCurso']]; ?>
@@ -68,7 +67,6 @@
             2022-23 Manuel Martín Alonso. ©Todos los derechos reservados.
             <a href="https://github.com/Manuel0119/204DWESProyectoFinal" target="_blank"><img src="webroot/media/github-logo.png" alt="github" id="g"></a>
             <a href="doc/CV - Manuel Martín Alonso.pdf" target="_blank"><img src="webroot/media/curriculum-logo.png" alt="curriculum" id="curricu"></a>
-            <a href="../../204DWESProyectoDWES/indexProyectoDWES.php"><img src="webroot/media/volver.png" alt="volver" class="volver"/></a>
         </footer>
     </body>
 </html>
