@@ -7,6 +7,12 @@ if (isset($_REQUEST['cancelar'])) {
     header('Location: index.php');
     exit();
 }
+if (isset($_REQUEST['registrar'])) {
+    $_SESSION['paginaEnCurso'] = 'wip';
+    $_SESSION['paginaAnterior'] = 'login';
+    header("Location: index.php");
+    exit();
+}
 if (isset($_REQUEST['iniciarSesion'])) {
     $aErrores = [
         'usuario' => null,

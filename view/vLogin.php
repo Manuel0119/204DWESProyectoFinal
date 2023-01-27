@@ -66,8 +66,12 @@
             span{
                 color: #6CD7BD;
             }
-            p{
+            #parrafoIntruccion{
                 color: white;
+                font-size: large;
+            }
+            p{
+                color: black;
                 font-size: large;
             }
             input[type="submit"]{
@@ -88,13 +92,19 @@
             label{
                 font-size: larger;
             }
+            hr {
+                width: 20rem;
+                height: 0.2em;
+                border: none;
+                background-color: #bbbbbb;
+            }
         </style>
     </head>
     <body>
         <div class="general">
             <div class="cuadroIzquierdo">
                 <h2><span>Accede</span> a tu cuenta LoginLogoff del proyecto final con tu usuario y contraseña.</h2>
-                <p>Iniciar sesión o tener una cuenta de LoginLogoff en el proyecto final te permite obtener ventajas que antes no habías visto.</p>
+                <p id="parrafoIntruccion">Iniciar sesión o tener una cuenta de LoginLogoff en el proyecto final te permite obtener ventajas que antes no habías visto.</p>
             </div>
             <div class="codigophp">
                 <h1>Login</h1>
@@ -116,6 +126,12 @@
                         <tr>
                             <td colspan="2">
                                 <input type="submit" id="cancelar" name="cancelar" value="Cancelar">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr>
+                                <p>¿No dispones de una cuenta?. Crearse una cuenta es <span>gratis</span></p>
                             </td>
                         </tr>
                         <tr>
