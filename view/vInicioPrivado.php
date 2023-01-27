@@ -16,6 +16,9 @@
                 flex-flow: wrap;
                 align-items: flex-start;
             }
+            tbody{
+                padding: 10px;
+            }
             td{
                 font-size: 2rem;
             }
@@ -26,7 +29,7 @@
                 justify-content: center;
                 min-height: 2.5rem;
                 padding: 0 2rem;
-                width: 100%;
+                width: 13rem;
                 cursor: pointer;
                 font-size: large;
                 border: 1px solid black;
@@ -101,14 +104,24 @@
         <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
             <table class="formulario">
                 <tr>
+                    <td colspan="2"><input type="submit" id="salir" value="Cerrar Sesion" name="salir"></td>
+                </tr>
+                <tr>
                     <td colspan="2"><input type="submit" id="detalle" value="Detalle" name="detalle"></td>
                 </tr> 
                 <tr>
-                    <td colspan="2"><input type="submit" id="WIP" value="WIP" name="WIP"></td>
+                    <td colspan="2"><input type="submit" id="error" value="Error" name="error"></td>
                 </tr> 
                 <tr>
-                    <td colspan="2"><input type="submit" id="salir" value="Salir" name="salir"></td>
-                </tr>
+                    <td colspan="2"><input type="submit" id="editar_Perfil" value="Editar Perfil" name="editar_Perfil"></td>
+                </tr> 
+                <tr>
+                    <td colspan="2"><input type="submit" id="mant_departamentos" value="Mto.Departamentos" name="mant_departamentos"></td>
+                </tr> 
+                <tr>
+                    <td colspan="2"><input type="submit" id="rest" value="Rest" name="rest"></td>
+                </tr> 
+                
             </table>
         </form>
     </body>
