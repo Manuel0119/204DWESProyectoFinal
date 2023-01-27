@@ -67,10 +67,10 @@
         </style>
     </head>
     <body>
-        <p>WIP</p>
+        <p>REST</p>
         <div class="codigophp">
             <form name="ejercicio21" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <input type="submit" id="volverWIP" name="volverWIP" value="Volver">
+                <input type="submit" id="volverREST" name="volverREST" value="Volver">
             </form>
         </div>
     </body>

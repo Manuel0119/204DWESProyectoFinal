@@ -79,7 +79,7 @@
             2022-23 Manuel Martín Alonso. ©Todos los derechos reservados.
             <a href="https://github.com/Manuel0119/204DWESProyectoFinal" target="_blank"><img src="webroot/media/github-logo.png" alt="github" id="g"></a>
             <a href="doc/CV - Manuel Martín Alonso.pdf" target="_blank"><img src="webroot/media/curriculum-logo.png" alt="curriculum" id="curricu"></a>
-            <a href="https://www.ikea.com/es/es/" target="_blank" style="color: white;">Página a la que quiero parecerme: "Ikea"</a>
+            <a href="https://www.ikea.com/es/es/" target="_blank" style="color: white;">Página a imitar: "Ikea"</a>
         </footer>
     </body>
 </html>

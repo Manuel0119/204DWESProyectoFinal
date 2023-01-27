@@ -119,7 +119,7 @@
                     <td colspan="2"><input type="submit" id="mant_departamentos" value="Mto.Departamentos" name="mant_departamentos"></td>
                 </tr> 
                 <tr>
-                    <td colspan="2"><input type="submit" id="rest" value="Rest" name="rest"></td>
+                    <td colspan="2"><input type="submit" id="rest" value="REST" name="rest"></td>
                 </tr> 
                 
             </table>

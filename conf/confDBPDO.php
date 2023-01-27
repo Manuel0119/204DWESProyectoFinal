@@ -14,7 +14,7 @@ define("USER", 'User204DWESLoginLogoff');
 // Contraseña con la que conectarse a la base de datos 
 define("PASSWORD", 'paso');
 */
-/*
+
 //ENTORNO DE DESARROLLO
 // IP del servidor y Nombre de la base de datos
 define("DSN", 'mysql:host=192.168.20.19;dbname=DB204DWESLoginLogoff');
@@ -22,8 +22,8 @@ define("DSN", 'mysql:host=192.168.20.19;dbname=DB204DWESLoginLogoff');
 define("USER", 'User204DWESLoginLogoff');
 // Contraseña con la que conectarse a la base de datos 
 define("PASSWORD", 'paso');
-*/
 
+/*
 //ENTORNO DE EXPLOTACION 1&1
 // IP del servidor y Nombre de la base de datos
 define("DSN", 'mysql:host=db5010845816.hosting-data.io; dbname=dbs9174001;');
@@ -31,5 +31,5 @@ define("DSN", 'mysql:host=db5010845816.hosting-data.io; dbname=dbs9174001;');
 define("USER", 'dbu5387073');
 // Contraseña con la que conectarse a la base de datos 
 define("PASSWORD", 'daw2_Sauces');
-
+*/
 ?>
