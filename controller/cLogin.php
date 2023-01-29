@@ -3,14 +3,14 @@
 require_once 'core/221024ValidacionFormularios.php';
 
 if (isset($_REQUEST['cancelar'])) {
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaEnCurso'] = 'inicioPublico';
     header('Location: index.php');
     exit();
 }
 if (isset($_REQUEST['registrar'])) {
-    $_SESSION['paginaEnCurso'] = 'wip';
-    $_SESSION['paginaAnterior'] = 'login';
-    header("Location: index.php");
+    $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso']="registro";
+    header('Location: index.php');
     exit();
 }
 if (isset($_REQUEST['iniciarSesion'])) {
@@ -35,7 +35,7 @@ if (isset($_REQUEST['iniciarSesion'])) {
             $entradaOk = false;
         }
     }
-//   si no se ha pulsado iniciar sesion le pedimos que muestre el formulario de inicio
+    //Si todo es correcto aumentamos el número de conexiones y le rederigimos hacia el inicio privado.
     if ($entradaOk) {
         UsuarioPDO::registrarUltimaConexion($oUsuario);
         $_SESSION['User204DWESProyectoFinal'] = $oUsuario;
