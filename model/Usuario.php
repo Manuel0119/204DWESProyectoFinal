@@ -11,7 +11,7 @@ class Usuario {
     private $perfil;
     private $imagenUsuario;
 
-    function __construct($codUsuario, $password, $descUsuario, $numConexiones, $fechaHoraUltimaConexionAnterior, $perfil, $imagenUsuario) {
+    function __construct($codUsuario, $password, $descUsuario, $numConexiones, $fechaHoraUltimaConexionAnterior, $perfil='usuario', $imagenUsuario=null) {
         $this->codUsuario = $codUsuario;
         $this->password = $password;
         $this->descUsuario = $descUsuario;

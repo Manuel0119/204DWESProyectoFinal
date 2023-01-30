@@ -31,7 +31,7 @@ class UsuarioPDO implements UsuarioDB {
 
     public static function altaUsuario($codUsuario, $password, $descUsuario) {
         $SQLAltaUsuario = <<<sql
-                INSERT INTO T01_Usuario values('{$codUsuario}',sha2(concat('{$codUsuario}','{$password}'),256),'{$descUsuario}', 1, now());
+                INSERT INTO T01_Usuario(T01_CodUsuario, T01_Password, T01_DescUsuario, T01_NumConexiones, T01_FechaHoraUltimaConexion) values('{$codUsuario}',sha2(concat('{$codUsuario}','{$password}'),256),'{$descUsuario}',1, now());
                 sql;
         if (self::validarCodNoExiste($codUsuario)) {
             DBPDO::ejecutarConsulta($SQLAltaUsuario);
