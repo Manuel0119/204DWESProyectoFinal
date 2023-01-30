@@ -4,17 +4,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MMA - App Login-Logoff</title>
+        <title>MMA - Proyecto Final</title>
         <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico"> 
     </head>
     <style>
         body{
             margin: 0;
             padding: 0;
-            height: 90vh;
+            height: 94.2vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            flex-flow: wrap;
+            align-items: flex-start;
         }
         .slider{
             width: 800px;
@@ -155,9 +156,6 @@
         .button:hover span:after {
             opacity: 1;
             right: 0;
-        }
-        form{
-            margin-bottom: 25px;
         }
     </style>
     <script>
