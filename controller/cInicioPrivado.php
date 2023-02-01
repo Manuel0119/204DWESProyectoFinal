@@ -13,10 +13,7 @@ if(isset($_REQUEST['detalle'])){
     exit();
 }
 if(isset($_REQUEST['error'])){
-    $_SESSION['paginaEnCurso']='wip';
-    $_SESSION['paginaAnterior']='inicioPrivado';
-    header("Location: index.php"); 
-    exit();
+    DBPDO::ejecutarConsulta("select * from tablaNoExiste;");
 }
 if(isset($_REQUEST['editar_Perfil'])){
     $_SESSION['paginaEnCurso']='wip';

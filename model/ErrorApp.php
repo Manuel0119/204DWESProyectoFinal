@@ -9,7 +9,7 @@ class ErrorApp {
     private $paginaSiguiente;
 
     
-    function __construct(int $codError, string $descError, string $archivoError, string $lineaError, string $paginaSiguiente) {
+    function __construct($codError, $descError, $archivoError, $lineaError, $paginaSiguiente) {
         $this->codError = $codError;
         $this->descError = $descError;
         $this->archivoError = $archivoError;
@@ -38,4 +38,3 @@ class ErrorApp {
     }
 }
 ?>
-
