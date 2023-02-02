@@ -14,7 +14,7 @@ class REST{
         $aUniversidades = json_decode($archivoJSON, true);
         if ($aUniversidades) {
             foreach ($aUniversidades as $valor){
-                array_push($aUniversidad, new Universidad($valor['nombre'], $valor['pais'], $valor['pagina'], $valor['codigo'], $valor['provincia_estado']));
+                array_push($aUniversidad, new Universidad($valor['name'], $valor['country'], $valor['web_pages'][0], $valor['alpha_two_code'], $valor['state-province']));
             }
         }
         return $aUniversidad;

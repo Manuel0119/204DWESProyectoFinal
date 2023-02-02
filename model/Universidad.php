@@ -62,7 +62,5 @@ class Universidad{
     public function setProvincia_estado($provincia_estado): void {
         $this->provincia_estado = $provincia_estado;
     }
-
 }
 ?>
-

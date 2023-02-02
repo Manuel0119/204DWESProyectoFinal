@@ -7,6 +7,10 @@ require_once 'model/Usuario.php';
 require_once 'model/UsuarioPDO.php';
 require_once 'model/DBPDO.php';
 require_once 'model/ErrorApp.php';
+require_once "model/REST.php";
+require_once "model/Universidad.php";
+require_once "model/Departamento.php";
+require_once "model/DepartamentoPDO.php";
 define("OBLIGATORIO", 1);
 
 $aControladores=[
@@ -20,7 +24,8 @@ $aControladores=[
     "miCuenta"=>"controller/cMiCuenta.php",
     "cambiarPassword"=>"controller/cCambiarPassword.php",
     "borrarCuenta"=>"controller/cBorrarCuenta.php",
-    "rest"=>"controller/cREST.php"
+    "rest"=>"controller/cREST.php",
+    "mantenimiento"=>"controller/cMtoDepartamentos.php"
 ];
 
 $aVistas=[
@@ -35,6 +40,7 @@ $aVistas=[
     "miCuenta"=>"view/vMiCuenta.php",
     "cambiarCassword"=>"view/vCambiarPassword.php",
     "borrarCuenta"=>"view/vBorrarCuenta.php",
-    "rest"=>"view/vREST.php"
+    "rest"=>"view/vREST.php",
+    "mantenimiento"=>"view/vMtoDepartamentos.php"
 ];
 ?>
