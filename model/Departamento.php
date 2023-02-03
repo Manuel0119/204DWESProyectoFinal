@@ -18,7 +18,7 @@ class Departamento{
     function __construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenNegocio, $fechaBajaDepartamento) {
         $this->codDepartamento = $codDepartamento;
         $this->descDepartamento = $descDepartamento;
-        $this->fechaCreacionDepartamento = $fechaCreacionDepartamento;
+        $this->fechaCreacionDepartamento = new DateTime($fechaCreacionDepartamento);
         $this->volumenNegocio = $volumenNegocio;
         $this->fechaBajaDepartamento = $fechaBajaDepartamento;
     }

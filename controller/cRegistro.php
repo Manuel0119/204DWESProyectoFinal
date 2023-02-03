@@ -26,6 +26,9 @@ if (isset($_REQUEST['registro'])) {
             $entradaOk = false;
         }
     }
+    if (!UsuarioPDO::validarCodNoExiste($_REQUEST['usuario'])) {
+        $entradaOk = false;
+    }
     if ($_REQUEST['password'] == $_REQUEST['repeatPassword'] && $entradaOk) {
         $oUsuario = UsuarioPDO::altaUsuario($_REQUEST['usuario'], $_REQUEST['password'], $_REQUEST['descripcion']);
         $_SESSION['User204DWESProyectoFinal'] = $oUsuario;

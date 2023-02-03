@@ -14,16 +14,17 @@ class DepartamentoPDO {
         $resultadoConsulta = DBPDO::ejecutarConsulta($SQLbuscarDepartamentoPorDescripcion);
         $oResultado = $resultadoConsulta->fetchObject();
         while ($oResultado != null) {
-            array_push($aDepartamento, new Departamento(
+            $oDepartamento = new Departamento(
                             $oResultado->T02_CodDepartamento,
                             $oResultado->T02_DescDepartamento,
                             $oResultado->T02_FechaCreacionDepartamento,
-                            $oResultado->T02_FechaCreacionDepartamento,
                             $oResultado->T02_VolumenDeNegocio,
                             $oResultado->T02_FechaBajaDepartamento
-            ));
+            );
+            array_push($aDepartamento, $oDepartamento);
             $oResultado = $resultadoConsulta->fetchObject();
         }
+        return $aDepartamento;
     }
 
 }

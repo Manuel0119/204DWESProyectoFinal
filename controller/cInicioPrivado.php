@@ -22,7 +22,7 @@ if(isset($_REQUEST['editar_Perfil'])){
     exit();
 }
 if(isset($_REQUEST['mant_departamentos'])){
-    $_SESSION['paginaEnCurso']='wip';
+    $_SESSION['paginaEnCurso']='mantenimiento';
     $_SESSION['paginaAnterior']='inicioPrivado';
     header("Location: index.php"); 
     exit();
