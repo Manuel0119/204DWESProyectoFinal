@@ -41,8 +41,23 @@ class UsuarioPDO implements UsuarioDB {
         }
     }
 
-    public static function modificarUsuario() {
-        
+    public static function modificarUsuario($oUsuario, $descUsuario) {
+        $SQLmodificarUsuario = <<<sql
+                UPDATE T01_Usuario set T01_DescUsuario="{$descUsuario}" WHERE T01_CodUsuario="{$oUsuario->getCodUsuario()}";
+                sql;
+        DBPDO::ejecutarConsulta($SQLmodificarUsuario);
+        $oUsuario->setDescUsuario($descUsuario);
+    }
+
+    public static function cambiarPassword($oUsuario, $newPassword) {
+        $SQLmodificarContraseña = <<< sql
+            UPDATE T01_Usuario SET T01_Password="{$newPassword}" WHERE T01_CodUsuario="{$oUsuario->getCodUsuario()}";
+        sql;
+        $ejecucionOK = DBPDO::ejecutarConsulta($SQLmodificarContraseña);
+        if ($ejecucionOK) {
+            $oUsuario->setPassword($newPassword);
+        }
+        return $ejecucionOK;
     }
 
     public static function borrarUsuario($codUsuario) {

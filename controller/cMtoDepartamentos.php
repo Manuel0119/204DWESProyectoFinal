@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * Fichero que contiene el controlador de la gestión del mantenimiento de departamentos.
+ * @author Manuel Martín Alonso
+ * @since: 03-02-2023
+ * Última modificación: 05-02-2023
+ */
+
+$aDepartamentos = DepartamentoPDO::buscarDepartamentoPorDescripcion("");
 if (isset($_REQUEST['volver'])) {
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
     header('Location: index.php');
@@ -28,4 +36,3 @@ if (isset($_REQUEST['buscar'])) {
 }
 require_once $aVistas['layout'];
 ?>
-

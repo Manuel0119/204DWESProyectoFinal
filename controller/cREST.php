@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * Fichero que contiene el controlador de la gestión del REST.
+ * @author Manuel Martín Alonso
+ * @since: 02-02-2023
+ * Última modificación: 05-02-2023
+ */
+
 if (isset($_REQUEST['volverREST'])) {
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
     header('Location: index.php');
@@ -42,4 +49,3 @@ if ($entradaOk) {
 }
 require_once $aVistas['layout'];
 ?>
-

@@ -2,7 +2,7 @@
 <html lang="en">
     <!--
         Autor: Manuel Martín Alonso.
-        Utilidad: Este programa consiste en crear una ventana de WIP.
+        Utilidad: Este programa consiste en crear una ventana de REST.
         Fecha-última-revisión: 27-01-2023.
     -->
     <head>
@@ -145,4 +145,3 @@
         </div>
     </body>
 </html>
-

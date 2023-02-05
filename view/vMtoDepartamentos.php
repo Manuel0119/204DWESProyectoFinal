@@ -2,19 +2,19 @@
 <html lang="en">
     <!--
         Autor: Manuel Martín Alonso.
-        Utilidad: Este programa consiste en crear una ventana de WIP.
-        Fecha-última-revisión: 03-02-2023.
+        Utilidad: Este programa consiste en crear una ventana de mantenimiento de departamentos.
+        Fecha-última-revisión: 05-02-2023.
     -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MMA - Proyecto Final</title>
+        <title>MMA - Proyecto Final - Mto.Departamentos</title>
         <link rel="stylesheet" href="webroot/css/estilos.css">
         <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico">
         <style>
             body{
-                width: 99%;
+                width: 100%;
             }
             td {
                 text-align: center;
@@ -69,11 +69,6 @@
                 border: 1px black solid;
                 padding: 15px;
             }
-            td{
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-            }
             tbody{
                 display: contents;
             }
@@ -109,10 +104,9 @@
                 <table class="formulario">
                     <tr>
                         <td><label for="descripcion">Descripción:</label>
-                            <input type="text" name="descripcion" id="descripcion" class="entradadatos"/>
+                            <input type="text" name="descripcion" id="descripcion" class="entradadatos" value="<?php echo $_REQUEST['descripcion'] ?? ''; ?>"/>
                             <input type="submit" id="buscar" value="Buscar" name="buscar">
                         </td>
-
                     </tr>
                 </table>
             </form>
@@ -128,15 +122,14 @@
                 </thead>
                 <tbody>
                     <?php
-                    
                     foreach ($aDepartamentos as $oDepartamento) {
                         ?>
                         <tr>
-                            <td><?php echo $oDepartamento->getCodDepartamento()?></td>
-                            <td><?php echo $oDepartamento->getDescDepartamento()?></td>
-                            <td><?php echo $oDepartamento->getFechaCreacionDepartamento()?></td>
-                            <td><?php echo $oDepartamento->getVolumenNegocio()?></td>
-                            <td><?php echo $oDepartamento->getFechaBajaDepartamento()?></td>
+                            <td><?php echo $oDepartamento->getCodDepartamento() ?></td>
+                            <td><?php echo $oDepartamento->getDescDepartamento() ?></td>
+                            <td><?php echo $oDepartamento->getFechaCreacionDepartamento()->format('Y-m-d H:i:s'); ?></td>
+                            <td><?php echo $oDepartamento->getVolumenNegocio() ?></td>
+                            <td><?php echo $oDepartamento->getFechaBajaDepartamento() ?></td>
                         </tr>
                         <?php
                     }
@@ -146,5 +139,3 @@
         </div>
     </body>
 </html>
-
-

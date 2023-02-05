@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * Fichero que contiene el controlador de la gestión de los registros de los nuevos usuarios de la aplicación.
+ * @author Manuel Martín Alonso
+ * @since: 30-01-2023
+ * Última modificación: 05-02-2023
+ */
+
 require_once 'core/221024ValidacionFormularios.php';
 
 if (isset($_REQUEST['volver'])) {
@@ -20,7 +27,7 @@ if (isset($_REQUEST['registro'])) {
     $aErrores['usuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'], 8, 4, OBLIGATORIO);
     $aErrores['password'] = validacionFormularios::validarPassword($_REQUEST['password'], 8, 4, 1, OBLIGATORIO);
     $aErrores['repeatPassword'] = validacionFormularios::validarPassword($_REQUEST['password'], 8, 4, 1, OBLIGATORIO);
-    $aErrores['descripcion'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['descripcion'], 255, 2, 1);
+    $aErrores['descripcion'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['descripcion'], 255, 2, OBLIGATORIO);
     foreach ($aErrores as $claveError => $mensajeError) {
         if ($mensajeError != null) {
             $entradaOk = false;

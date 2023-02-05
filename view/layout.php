@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--
+        Autor: Manuel Martín Alonso.
+        Utilidad: Este programa consiste en crear un layout.
+        Fecha-última-revisión: 05-02-2023.
+    -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -83,4 +88,3 @@
         </footer>
     </body>
 </html>
-
