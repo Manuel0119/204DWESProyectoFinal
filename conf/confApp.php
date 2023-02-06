@@ -35,7 +35,8 @@ $aControladores=[
     "cambiarPassword"=>"controller/cCambiarPassword.php",
     "borrarCuenta"=>"controller/cBorrarCuenta.php",
     "rest"=>"controller/cREST.php",
-    "mantenimiento"=>"controller/cMtoDepartamentos.php"
+    "mantenimiento"=>"controller/cMtoDepartamentos.php",
+    "tecnologias"=>"controller/cTecnologias.php"
 ];
 
 //Array de las vistas
@@ -52,6 +53,7 @@ $aVistas=[
     "cambiarPassword"=>"view/vCambiarPassword.php",
     "borrarCuenta"=>"view/vBorrarCuenta.php",
     "rest"=>"view/vREST.php",
-    "mantenimiento"=>"view/vMtoDepartamentos.php"
+    "mantenimiento"=>"view/vMtoDepartamentos.php",
+    "tecnologias"=>"view/vTecnologias.php"
 ];
 ?>

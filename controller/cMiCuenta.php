@@ -14,9 +14,9 @@ if (isset($_REQUEST['cancelar'])) {
     exit();
 }
 if (isset($_REQUEST['cambiarPassword'])) {
-    $_SESSION['paginaAnterior']='miCuenta';
-    $_SESSION['paginaEnCurso']='cambiarPassword';
-    header("Location: index.php"); 
+    $_SESSION['paginaAnterior'] = 'miCuenta';
+    $_SESSION['paginaEnCurso'] = 'cambiarPassword';
+    header("Location: index.php");
     exit();
 }
 if (isset($_REQUEST['aceptar'])) {
@@ -40,9 +40,9 @@ if (isset($_REQUEST['aceptar'])) {
     }
 }
 if (isset($_REQUEST['borrarUsuario'])) {
-    $_SESSION['paginaEnCurso']='wip';
-    $_SESSION['paginaAnterior']='miCuenta';
-    header("Location: index.php"); 
+    $_SESSION['paginaEnCurso'] = 'wip';
+    $_SESSION['paginaAnterior'] = 'miCuenta';
+    header("Location: index.php");
     exit();
 }
 require_once $aVistas['layout'];

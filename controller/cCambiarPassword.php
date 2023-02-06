@@ -29,8 +29,7 @@ if (isset($_REQUEST['aceptar'])) {
             $entradaOk = false;
         }
     }
-    if (hash('sha256', $_SESSION['User204DWESProyectoFinal']->getCodUsuario().$_REQUEST['previewPassword'])!=$_SESSION['User204DWESProyectoFinal']->getPassword() 
-        || $_REQUEST['newPassword'] != $_REQUEST['RnewPassword']) {
+    if (hash('sha256', $_SESSION['User204DWESProyectoFinal']->getCodUsuario() . $_REQUEST['previewPassword']) != $_SESSION['User204DWESProyectoFinal']->getPassword() || $_REQUEST['newPassword'] != $_REQUEST['RnewPassword']) {
         $entradaOk = false;
     }
     if ($entradaOk) {

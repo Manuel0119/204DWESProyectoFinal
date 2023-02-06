@@ -17,7 +17,7 @@ if (isset($_REQUEST['buscar'])) {
     $aErrores = [
         "pais" => null
     ];
-    $aRespuestas=[];
+    $aRespuestas = [];
     //Validar entrada
     $aErrores["pais"] = validacionFormularios::comprobarAlfabetico($_REQUEST['pais'], 1000, 2, OBLIGATORIO);
     //Recorrer el array de errores

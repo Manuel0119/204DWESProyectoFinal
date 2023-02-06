@@ -15,8 +15,8 @@ if (isset($_REQUEST['cancelar'])) {
     exit();
 }
 if (isset($_REQUEST['registrar'])) {
-    $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
-    $_SESSION['paginaEnCurso']="registro";
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = "registro";
     header('Location: index.php');
     exit();
 }

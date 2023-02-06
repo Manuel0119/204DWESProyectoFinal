@@ -64,7 +64,16 @@
                 align-content: center;
             }
             img{
-                width: 30px;height: 30px;
+                width: 30px;
+                height: 30px;
+            }
+            #tecnologias{
+                background: #2D3E52;
+                color: white;
+                font-size: larger;
+                border: none;
+                cursor: pointer;
+                
             }
         </style>
         <script defer src="webroot/js/Reloj.js"></script>
@@ -85,6 +94,9 @@
             <a href="https://github.com/Manuel0119/204DWESProyectoFinal" target="_blank"><img src="webroot/media/github-logo.png" alt="github" id="g"></a>
             <a href="doc/CV - Manuel Martín Alonso.pdf" target="_blank"><img src="webroot/media/curriculum-logo.png" alt="curriculum" id="curricu"></a>
             <a href="https://www.ikea.com/es/es/" target="_blank" style="color: white;">Página a imitar: "Ikea"</a>
+            <form method="post">
+                <button type="submit" id="tecnologias" name="tecnologias" value="Tecnologías">Tecnologías</button>
+            </form>
         </footer>
     </body>
 </html>
