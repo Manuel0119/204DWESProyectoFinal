@@ -9,7 +9,6 @@
 
 if (isset($_REQUEST['volverTecnologias'])) {
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
-    $_SESSION['paginaAnterior'] = '';
     header('Location: index.php');
     exit;
 }
