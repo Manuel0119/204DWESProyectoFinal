@@ -2,8 +2,8 @@
 <html lang="en">
     <!--
         Autor: Manuel Martín Alonso.
-        Utilidad: Este programa consiste en crear una ventana de WIP.
-        Fecha-última-revisión: 27-01-2023.
+        Utilidad: Este programa consiste en crear una ventana de tecnologías utilizadas a lo largo del curso.
+        Fecha-última-revisión: 06-02-2023.
     -->
     <head>
         <meta charset="UTF-8">
@@ -67,10 +67,10 @@
         </style>
     </head>
     <body>
-        <p>WIP</p>
+        <p>Tecnologías</p>
         <div class="codigophp">
             <form name="ejercicio21" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <input type="submit" id="volverWIP" name="volverWIP" value="Volver">
+                <input type="submit" id="volverTecnologias" name="volverTecnologias" value="Volver">
             </form>
         </div>
     </body>

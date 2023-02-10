@@ -3,18 +3,19 @@
     <!--
         Autor: Manuel Martín Alonso.
         Utilidad: Este programa consiste en crear una ventana de detalle.
-        Fecha-última-revisión: 27-01-2023.
+        Fecha-última-revisión: 05-02-2023.
     -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MMA - Proyecto Final</title>
+        <title>MMA - Proyecto Final - Detalle</title>
         <link rel="stylesheet" href="webroot/css/estilos.css">
         <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico">
         <style>
             body{
-                width: 99%;
+                width: 100%;
+                overflow-x: hidden;
             }
             td {
                 text-align: center;
@@ -232,4 +233,3 @@
         </table>
     </body>
 </html>
-

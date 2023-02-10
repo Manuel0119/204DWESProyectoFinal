@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--
+        Autor: Manuel Martín Alonso.
+        Utilidad: Este programa consiste en crear una ventana de registro.
+        Fecha-última-revisión: 05-02-2023.
+    -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,19 +91,19 @@
                     <table class="formulario">
                         <tr>
                             <td><label for="usuario">Usuario:</label></td>
-                            <td><input type="text" name="usuario" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="text" name="usuario" class="entradadatos"/></td>
                         </tr>
                         <tr>
                             <td><label for="password">Contraseña:</label></td>
-                            <td><input type="password" name="password" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="password" name="password" class="entradadatos"/></td>
                         </tr>
                         <tr>
                             <td><label for="password">Vuelva a introducir la contraseña:</label></td>
-                            <td><input type="password" name="repeatPassword" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos"/></td>
                         </tr>
                         <tr>
                             <td><label for="password">Descripción:</label></td>
-                            <td><input type="text" name="descripcion" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="text" name="descripcion" class="entradadatos"/></td>
                         </tr>
                         <tr>
                             <td>
