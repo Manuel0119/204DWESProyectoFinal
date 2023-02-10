@@ -4,7 +4,6 @@
  * Class DepartamentoPDO
  *
  * Fichero con la clase DepartamentoPDO
- *
  * PHP version 8.1
  */
 
@@ -33,9 +32,9 @@ class DepartamentoPDO {
      * 
      * @author Manuel Martín Alonso
      * @version 1.0
-     * @since: 05-02-2023 Se han mejorado los comentarios de la clase DBPDO
-     * @since: 30-01-2023 Se han arreglado errores de ejecución
-     * @since: 24-01-2023
+     * @since 05-02-2023 Se han mejorado los comentarios de la clase DBPDO
+     * @since 30-01-2023 Se han arreglado errores de ejecución
+     * @since 24-01-2023
      * @param string $descDepartamento Descripción del departamento a buscar
      * @access public
      * @return array Array con los departamentos encontrados 
