@@ -61,7 +61,10 @@ class UsuarioPDO implements UsuarioDB {
     }
 
     public static function borrarUsuario($codUsuario) {
-        
+        $query = <<<query
+                delete from T01_Usuario where T01_CodUsuario='$codUsuario';
+                query;
+        DBPDO::ejecutarConsulta($query);
     }
 
     public static function validarCodNoExiste($codUsuario) {

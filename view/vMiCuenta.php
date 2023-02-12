@@ -128,9 +128,6 @@
                 transition: all 0.5s ease;
             }
         </style>
-        <script>
-
-        </script>
     </head>
     <body>
         <div class="general">

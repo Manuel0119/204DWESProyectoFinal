@@ -3,7 +3,7 @@
     <!--
         Autor: Manuel Martín Alonso.
         Utilidad: Este programa consiste en crear una ventana de tecnologías utilizadas a lo largo del curso.
-        Fecha-última-revisión: 06-02-2023.
+        Fecha-última-revisión: 11-02-2023.
     -->
     <head>
         <meta charset="UTF-8">
@@ -13,9 +13,6 @@
         <link rel="stylesheet" href="webroot/css/estilos.css">
         <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico">
         <style>
-            body{
-                width: 99%;
-            }
             td {
                 text-align: center;
             }
@@ -64,6 +61,15 @@
             tbody{
                 display: contents;
             }
+            .estudio a {
+                color: #6CD7BD;
+                text-decoration: none;
+                font-size: 1.22em;
+                font-weight: bold;
+            }
+            li{
+                margin-bottom: 1em;
+            }
         </style>
     </head>
     <body>
@@ -72,6 +78,19 @@
             <form name="ejercicio21" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <input type="submit" id="volverTecnologias" name="volverTecnologias" value="Volver">
             </form>
+        </div>
+        <div class="estudio">
+            <ul>
+                <li>
+                    <a href="doc/221007_EjerciciosTema1.pdf" target="_blank">Ejercicios Tema 1</a>
+                </li>
+                <li>
+                    <a href="doc/Wordpress-ManuelMartínAlonso-Presentación.pdf" target="_blank">Trabajo Personal Presentación</a>
+                </li>
+                <li>
+                    <a href="doc/WordPress-ManuelMartínAlonso-Word.pdf" target="_blank">Trabajo Personal Word</a>
+                </li>
+            </ul>
         </div>
     </body>
 </html>

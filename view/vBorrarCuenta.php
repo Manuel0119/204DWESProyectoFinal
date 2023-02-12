@@ -3,7 +3,7 @@
     <!--
         Autor: Manuel Martín Alonso.
         Utilidad: Este programa consiste en crear una ventana para editar la contraseña de una cuenta.
-        Fecha-última-revisión: 11-02-2023.
+        Fecha-última-revisión: 05-02-2023.
     -->
     <head>
         <meta charset="UTF-8">
@@ -133,31 +133,27 @@
         <div class="general">
             <div class="cuadroIzquierdo">
                 <h2 id="bienvenida">Bienvenido <span><?php echo $_SESSION['User204DWESProyectoFinal']->getDescUsuario(); ?></span> a tu cuenta LoginLogoff del proyecto final.</h2>
-                <p id="parrafoIntruccion">Para cambiar la contraseña de su cuenta debe de cumplir una serie de requisitos: </p>
-                <ul>
-                    <li>8 letras máximo.</li>
-                    <li>4 letras mínimo.</li>
-                </ul>
+                <p id="parrafoIntruccion">Si desea eliminar su cuenta personal con nosotros debe introducir la contraseña de su cuenta</p>
             </div>
             <div class="codigophp">
-                <h1>Cambiar Contraseña</h1>
+                <h1>Borrar Cuenta</h1>
                 <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
                     <table class="formulario">
                         <tr>
-                            <td><label for="codigoUsuario">Contraseña Antigua:</label></td>
-                            <td><input type="password" style="background: lightyellow" name="previewPassword" id="previewPassword" class="entradadatos"/></td>
+                            <td><label for="codigoUsuario">Código Usuario:</label></td>
+                            <td><input type="text" style="background: grey" name="codigoUsuario" id="codigoUsuario" class="entradadatos" value="<?php echo $_SESSION['User204DWESProyectoFinal']->getCodUsuario(); ?>" readonly="true"/></td>
                         </tr>
                         <tr>
-                            <td><label for="descripcionUsuario">Contraseña Nueva:</label></td>
-                            <td><input type="password" style="background: lightyellow" name="newPassword" id="newPassword" class="entradadatos"/></td>
+                            <td><label for="descripcionUsuario">Contraseña:</label></td>
+                            <td><input type="password" style="background: lightyellow" name="password" id="password" class="entradadatos"/></td>
                         </tr>
                         <tr>
-                            <td><label for="descripcionUsuario">Repita la Contraseña Nueva:</label></td>
-                            <td><input type="password" style="background: lightyellow" name="RnewPassword" id="RnewPassword" class="entradadatos"/></td>
+                            <td><label for="descripcionUsuario">Repita la Contraseña:</label></td>
+                            <td><input type="password" style="background: lightyellow" name="Rpassword" id="Rpassword" class="entradadatos"/></td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="submit" id="aceptar" value="Aceptar" name="aceptar">
+                                <input type="submit" id="borrarCuenta" value="Borrar Cuenta" name="borrarCuenta">
                                 <input type="submit" id="cancelar" value="Cancelar" name="cancelar">
                             </td>
                         </tr>
