@@ -13,12 +13,12 @@ if (isset($_REQUEST['cancelar'])) {
     header('Location: index.php');
     exit();
 }
+$aErrores = [
+    'previewPassword' => null,
+    'newPassword' => null,
+    'RnewPassword' => null
+];
 if (isset($_REQUEST['aceptar'])) {
-    $aErrores = [
-        'previewPassword' => null,
-        'newPassword' => null,
-        'RnewPassword' => null
-    ];
     $entradaOk = true;
     //Comprobamos que el usuario no haya introducido inyeccion de código y los datos estén correctos
     $aErrores['previewPassword'] = validacionFormularios::validarPassword($_REQUEST['previewPassword'], 8, 4, 1, OBLIGATORIO);
@@ -29,8 +29,9 @@ if (isset($_REQUEST['aceptar'])) {
             $entradaOk = false;
         }
     }
-    if (hash('sha256', $_SESSION['User204DWESProyectoFinal']->getCodUsuario() . $_REQUEST['previewPassword']) != $_SESSION['User204DWESProyectoFinal']->getPassword() || $_REQUEST['newPassword'] != $_REQUEST['RnewPassword']) {
+    if (hash('sha256', $_SESSION['User204DWESProyectoFinal']->getCodUsuario() . $_REQUEST['previewPassword']) != $_SESSION['User204DWESProyectoFinal']->getPassword() && !empty($_REQUEST['previewPassword']) || $_REQUEST['newPassword'] != $_REQUEST['RnewPassword']) {
         $entradaOk = false;
+        $aErrores['previewPassword']="Contraseña Incorrecta";
     }
     if ($entradaOk) {
         $password = hash('sha256', ($_SESSION['User204DWESProyectoFinal']->getCodUsuario() . $_REQUEST['newPassword']));

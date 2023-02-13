@@ -19,10 +19,10 @@ if (isset($_REQUEST['cambiarPassword'])) {
     header("Location: index.php");
     exit();
 }
-if (isset($_REQUEST['aceptar'])) {
-    $aErrores = [
+$aErrores = [
         'descripcion' => null
     ];
+if (isset($_REQUEST['aceptar'])) {
     $entradaOk = true;
     //Comprobamos que el usuario no haya introducido inyeccion de codigo y los datos estén correctos
     $aErrores['descripcion'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['descripcion'], 255, 4, OBLIGATORIO);

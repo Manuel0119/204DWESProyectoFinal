@@ -133,12 +133,16 @@
         <div class="general">
             <div class="cuadroIzquierdo">
                 <h2 id="bienvenida">Bienvenido <span><?php echo $_SESSION['User204DWESProyectoFinal']->getDescUsuario(); ?></span> a tu cuenta LoginLogoff del proyecto final.</h2>
-                <p id="parrafoIntruccion">Si desea eliminar su cuenta personal con nosotros debe introducir la contraseña de su cuenta</p>
             </div>
             <div class="codigophp">
                 <h1>Borrar Cuenta</h1>
                 <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
                     <table class="formulario">
+                        <tr>
+                            <td>
+                                <p>¿Desea borrar su cuenta?</p>
+                            </td>
+                        </tr>
                         <tr>
                             <td>
                                 <input type="submit" id="borrarCuenta" value="Borrar Cuenta" name="borrarCuenta">

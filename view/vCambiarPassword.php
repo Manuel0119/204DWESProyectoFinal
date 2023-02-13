@@ -146,14 +146,17 @@
                         <tr>
                             <td><label for="codigoUsuario">Contraseña Antigua:</label></td>
                             <td><input type="password" style="background: lightyellow" name="previewPassword" id="previewPassword" class="entradadatos"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['previewPassword'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="descripcionUsuario">Contraseña Nueva:</label></td>
                             <td><input type="password" style="background: lightyellow" name="newPassword" id="newPassword" class="entradadatos"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['newPassword'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="descripcionUsuario">Repita la Contraseña Nueva:</label></td>
                             <td><input type="password" style="background: lightyellow" name="RnewPassword" id="RnewPassword" class="entradadatos"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['RnewPassword'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td>

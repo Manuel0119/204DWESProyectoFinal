@@ -146,10 +146,12 @@
                         <tr>
                             <td><label for="codigoUsuario">Código Usuario:</label></td>
                             <td><input type="text" style="background: grey" name="codigoUsuario" id="codigoUsuario" class="entradadatos" value="<?php echo $_SESSION['User204DWESProyectoFinal']->getCodUsuario(); ?>" readonly="true"/></td>
+                            <td style="width: 28%;"></td>
                         </tr>
                         <tr>
                             <td><label for="descripcionUsuario">Descripción Usuario:</label></td>
                             <td><input type="text" style="background: lightyellow" name="descripcion" id="descripcion" class="entradadatos" value="<?php echo $_SESSION['User204DWESProyectoFinal']->getDescUsuario(); ?>"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['descripcion'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td>
