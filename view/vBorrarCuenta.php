@@ -140,18 +140,6 @@
                 <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
                     <table class="formulario">
                         <tr>
-                            <td><label for="codigoUsuario">Código Usuario:</label></td>
-                            <td><input type="text" style="background: grey" name="codigoUsuario" id="codigoUsuario" class="entradadatos" value="<?php echo $_SESSION['User204DWESProyectoFinal']->getCodUsuario(); ?>" readonly="true"/></td>
-                        </tr>
-                        <tr>
-                            <td><label for="descripcionUsuario">Contraseña:</label></td>
-                            <td><input type="password" style="background: lightyellow" name="password" id="password" class="entradadatos"/></td>
-                        </tr>
-                        <tr>
-                            <td><label for="descripcionUsuario">Repita la Contraseña:</label></td>
-                            <td><input type="password" style="background: lightyellow" name="Rpassword" id="Rpassword" class="entradadatos"/></td>
-                        </tr>
-                        <tr>
                             <td>
                                 <input type="submit" id="borrarCuenta" value="Borrar Cuenta" name="borrarCuenta">
                                 <input type="submit" id="cancelar" value="Cancelar" name="cancelar">
