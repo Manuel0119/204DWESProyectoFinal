@@ -70,8 +70,8 @@
                 background: white;
                 padding: 20px;
                 border-radius: 20px;
-                width: 30vw;
-                height: 35vh;
+                width: 40vw;
+                height: 40vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -91,19 +91,23 @@
                     <table class="formulario">
                         <tr>
                             <td><label for="usuario">Usuario:</label></td>
-                            <td><input style="background: lightyellow" type="text" name="usuario" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="text" name="usuario" class="entradadatos" value="<?php echo $_REQUEST['usuario'] ?? ''?>"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['usuario'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="password">Contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="password" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="password" name="password" class="entradadatos" value="<?php echo $_REQUEST['password'] ?? ''?>"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['password'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="password">Vuelva a introducir la contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos" value="<?php echo $_REQUEST['password'] ?? ''?>"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['repeatPassword'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="password">Descripción:</label></td>
-                            <td><input style="background: lightyellow" type="text" name="descripcion" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="text" name="descripcion" class="entradadatos" value="<?php echo $_REQUEST['descripcion'] ?? ''?>"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['descripcion'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td>

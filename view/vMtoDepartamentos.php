@@ -75,6 +75,7 @@
             .formulario{
                 width: 100%;
                 margin-bottom: 15px;
+                border-collapse: collapse;
             }
             .entradadatos{
                 -webkit-padding-start: .5rem;
@@ -103,9 +104,21 @@
             <form name="registro" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <table class="formulario">
                     <tr>
-                        <td><label for="descripcion">Descripción:</label>
-                            <input type="text" name="descripcion" id="descripcion" class="entradadatos" value="<?php echo $_REQUEST['descripcion'] ?? ''; ?>"/>
+                        <td style="border-bottom-color: transparent;">
+                            <label for="descripcion">Descripción:</label>
+                            <input type="text" name="descripcion" id="descripcion" class="entradadatos" value = "<?php echo $_SESSION['buscaDepartamentosPorDesc'] ?? '' ?>"/>
                             <input type="submit" id="buscar" value="Buscar" name="buscar">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Estado:</label>
+                            <label for="alta">Todos</label>
+                            <input type="radio" id="todos" name="todos" value="todos" checked>
+                            <label for="alta">Alta</label>
+                            <input type="radio" id="alta" name="alta" value="alta">
+                            <label for="baja">Baja</label>
+                            <input type="radio" id="baja" name="baja" value="baja">
                         </td>
                     </tr>
                 </table>
@@ -118,20 +131,24 @@
                         <th>Fecha Creación Departamento</th>
                         <th>Volumen de negocio</th>
                         <th>Fecha Baja</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($aDepartamentos as $oDepartamento) {
-                        ?>
-                        <tr>
-                            <td><?php echo $oDepartamento->getCodDepartamento() ?></td>
-                            <td><?php echo $oDepartamento->getDescDepartamento() ?></td>
-                            <td><?php echo $oDepartamento->getFechaCreacionDepartamento()->format('Y-m-d H:i:s'); ?></td>
-                            <td><?php echo $oDepartamento->getVolumenNegocio() ?></td>
-                            <td><?php echo $oDepartamento->getFechaBajaDepartamento() ?></td>
-                        </tr>
-                        <?php
+                    if ($aVMtoDepartamentos) {
+                        foreach ($aVMtoDepartamentos as $valorDepartamento) {
+                            ?>
+                            <tr>
+                                <td><?php echo $valorDepartamento['codDepartamento']; ?></td>
+                                <td><?php echo $valorDepartamento['descDepartamento']; ?></td>
+                                <td><?php echo $valorDepartamento['fechaCreacionDepartamento']; ?></td>
+                                <td><?php echo $valorDepartamento['volumenDeNegocio']; ?></td>
+                                <td><?php echo $valorDepartamento['fechaBajaDepartamento']; ?></td>
+                                <td><button type="button" value="">Editar/Consultar</button></td>
+                            </tr>
+                            <?php
+                        }
                     }
                     ?>
                 </tbody>
