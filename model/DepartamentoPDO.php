@@ -57,5 +57,38 @@ class DepartamentoPDO {
         }
         return $aDepartamento;
     }
+    
+    /**
+     * 
+     * Funcion buscarDepartamentoPorCodigo
+     * 
+     * Funcion que busca un departamento mediante el codigo del departamento en la base de datos
+     * 
+     * @author Manuel Martín Alonso
+     * @version 1.0
+     * @since 16-02-2023
+     * @param string $codDepartamento Codigo del departamento a buscar
+     * @access public
+     * @return object Objeto Departamento con el departamento encontrado
+     */
+     public static function buscarDepartamentoPorCodigo($codDepartamento) {
+        $SQLbuscarDepartamentoPorCodigo=<<< sql
+            SELECT * from T02_Departamento where T02_CodDepartamento = '{$codDepartamento}';
+        sql;
+        $resultado=DBPDO::ejecutarConsulta($SQLbuscarDepartamentoPorCodigo);
+        $oDepartamento = $resultado->fetchObject();
+        if(is_object($oDepartamento)){
+            $departamento = new Departamento(
+                            $oResultado->T02_CodDepartamento,
+                            $oResultado->T02_DescDepartamento,
+                            $oResultado->T02_FechaCreacionDepartamento,
+                            $oResultado->T02_VolumenDeNegocio,
+                            $oResultado->T02_FechaBajaDepartamento
+            );
+            return $departamento;
+        } else {
+            return false;
+        }
+    }
 }
 ?>
