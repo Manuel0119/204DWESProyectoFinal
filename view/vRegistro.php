@@ -101,7 +101,7 @@
                         </tr>
                         <tr>
                             <td><label for="password">Vuelva a introducir la contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos" value="<?php echo $_REQUEST['password'] ?? ''?>"/></td>
+                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['repeatPassword'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>

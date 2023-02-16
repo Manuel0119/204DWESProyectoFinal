@@ -104,55 +104,57 @@
             <form name="registro" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <table class="formulario">
                     <tr>
-                        <td style="border-bottom-color: transparent;">
+                        <td>
                             <label for="descripcion">Descripción:</label>
-                            <input type="text" name="descripcion" id="descripcion" class="entradadatos" value = "<?php echo $_SESSION['buscaDepartamentosPorDesc'] ?? '' ?>"/>
+                            <input type="text" name="descripcion" id="descripcion" class="entradadatos" value = "<?php echo $_SESSION['criterioBusquedaDepartamento'] ?? '' ?>" placeholder="Descripción del departamento"/>
                             <input type="submit" id="buscar" value="Buscar" name="buscar">
                         </td>
                     </tr>
-                    <tr>
+<!--                    <tr>
                         <td>
                             <label>Estado:</label>
                             <label for="alta">Todos</label>
-                            <input type="radio" id="todos" name="todos" value="todos" checked>
+                            <input type="radio" id="estado" name="estado" value="todos" checked>
                             <label for="alta">Alta</label>
-                            <input type="radio" id="alta" name="alta" value="alta">
+                            <input type="radio" id="estado" name="estado" value="alta">
                             <label for="baja">Baja</label>
-                            <input type="radio" id="baja" name="baja" value="baja">
+                            <input type="radio" id="estado" name="estado" value="baja">
                         </td>
-                    </tr>
+                    </tr>-->
                 </table>
             </form>
-            <table class="tablaMostrar">
-                <thead>
-                    <tr>
-                        <th>Código Departamento</th>
-                        <th>Descripción Departamento</th>
-                        <th>Fecha Creación Departamento</th>
-                        <th>Volumen de negocio</th>
-                        <th>Fecha Baja</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    if ($aVMtoDepartamentos) {
-                        foreach ($aVMtoDepartamentos as $valorDepartamento) {
-                            ?>
-                            <tr>
-                                <td><?php echo $valorDepartamento['codDepartamento']; ?></td>
-                                <td><?php echo $valorDepartamento['descDepartamento']; ?></td>
-                                <td><?php echo $valorDepartamento['fechaCreacionDepartamento']; ?></td>
-                                <td><?php echo $valorDepartamento['volumenDeNegocio']; ?></td>
-                                <td><?php echo $valorDepartamento['fechaBajaDepartamento']; ?></td>
-                                <td><button type="button" value="">Editar/Consultar</button></td>
-                            </tr>
-                            <?php
+            <form name="registro" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <table class="tablaMostrar">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Fecha Creación</th>
+                            <th>Volumen de negocio</th>
+                            <th>Fecha Baja</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        if ($aVMtoDepartamentos) {
+                            foreach ($aVMtoDepartamentos as $departamentoEnCurso) {
+                                ?>
+                                <tr>
+                                    <td><?php echo $departamentoEnCurso['codDepartamento']; ?></td>
+                                    <td><?php echo $departamentoEnCurso['descDepartamento']; ?></td>
+                                    <td><?php echo $departamentoEnCurso['fechaCreacionDepartamento']; ?></td>
+                                    <td><?php echo $departamentoEnCurso['volumenDeNegocio']; ?></td>
+                                    <td><?php echo $departamentoEnCurso['fechaBajaDepartamento']; ?></td>
+                                    <td><button type="submit" value="<?php echo $departamentoEnCurso['codDepartamento']; ?>" name="editar">Editar</button></td>
+                                </tr>
+                                <?php
+                            }
                         }
-                    }
-                    ?>
-                </tbody>
-            </table>
+                        ?>
+                    </tbody>
+                </table>
+            </form>
         </div>
     </body>
 </html>

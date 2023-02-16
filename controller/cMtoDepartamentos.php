@@ -6,16 +6,16 @@
  * @since: 03-02-2023
  * Última modificación: 05-02-2023
  */
-$_SESSION['criterioBusquedaDepartamento'] = "";
-if ($_SESSION['criterioBusquedaDepartamento']) {
-    $_SESSION['criterioBusquedaDepartamento'] = ´´;
+if (!isset($_SESSION['criterioBusquedaDepartamento'])) {
+    $_SESSION['criterioBusquedaDepartamento'] = '';
 }
-
 $aErrores = [
     'descripcion' => null
 ];
 if (isset($_REQUEST['volver'])) {
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    unset($_SESSION['criterioBusquedaDepartamento']);
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     header('Location: index.php');
     exit();
 }
@@ -29,7 +29,7 @@ if (isset($_REQUEST['buscar'])) {
             $entradaOk = false;
         }
     }
-}else{
+} else {
     $entradaOk = false;
 }
 if ($entradaOk) {
@@ -58,6 +58,12 @@ if ($aDepartamentos) {
             'fechaBajaDepartamento' => $oDepartamento->getFechaBajaDepartamento()
         ]);
     }
+}
+if (isset($_REQUEST['editar'])) {
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'editarDepartamento';
+    header("Location:index.php");
+    exit;
 }
 require_once $aVistas['layout'];
 ?>
