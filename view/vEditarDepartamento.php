@@ -2,35 +2,78 @@
 <html lang="en">
     <!--
         Autor: Manuel Martín Alonso.
-        Utilidad: Este programa consiste en crear una ventana de editar departamentos.
-        Fecha-última-revisión: 16-02-2023.
+        Utilidad: Este programa consiste en editar un departamento.
+        Fecha-última-revisión: 17-02-2023.
     -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MMA - Proyecto Final</title>
-        <link rel="stylesheet" href="webroot/css/estilos.css">
         <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico">
         <style>
-            body{
-                width: 100%;
+            h2{
+                font-size: 32px;
+                letter-spacing: -.04rem;
             }
-            td {
-                text-align: center;
+            .general{
+                display: flex;
+                width: 100vw;
+                height: 87vh;
             }
-            .encabezado {
+            .codigophp{
+                width: 60vw;
+                background-color: white;
+                display: flex;
+                -webkit-box-flex: 1;
+                flex: 1 1 auto;
+                padding: 0px 2rem;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+                -webkit-box-pack: justify;
                 justify-content: center;
-                position: initial;
+                align-items: center;
             }
-            .codigophp {
-                margin-bottom: 4rem;
-                margin-top: 0;
-                position: initial;
+            .cuadroIzquierdo{
+                width: 40vw;
+                background-color: rgb(0, 88, 163);
+                color: white;
+                display: flex;
+                -webkit-box-flex: 0;
+                flex: 0 1 auto;
+                height: auto;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+                -webkit-box-pack: end;
+                justify-content: center;
+                padding: 2rem 5rem;
             }
-            .volver{
-                height: 35px;
-                width: 35px;
+            .entradadatos{
+                -webkit-padding-start: .5rem;
+                -webkit-padding-end: .5rem;
+                background: none;
+                border: 1px solid black;
+                border-radius: 4px;
+                color: #111;
+                color: rgb(var(--colour-text-and-icon-1,17,17,17));
+                flex-grow: 1;
+                font-size: 1rem;
+                height: 2rem;
+                order: 3;
+                outline: none;
+                overflow: hidden;
+                padding: 0;
+                padding-inline-end: .5rem;
+                padding-inline-start: .5rem;
+            }
+            span{
+                color: #6CD7BD;
+            }
+            #parrafoIntruccion{
+                color: white;
+                font-size: large;
             }
             input[type="submit"]{
                 align-items: center;
@@ -45,33 +88,49 @@
                 border: 1px solid black;
             }
             input[type="submit"]:hover{
-                background: white;
+                background: #bbbbbb;
             }
-            form{
-                margin-top: 1rem;
-            }
-            .tablaMostrar {
-                width: 65%;
-                text-align: center;
-                margin: 0 auto;
-                margin-bottom: 20px;
-                border: 1px black solid;
-                border-collapse: collapse;
-            }
-            tr, td, th{
-                border: 1px black solid;
-            }
-            tbody{
-                display: contents;
+            label{
+                font-size: larger;
             }
         </style>
     </head>
     <body>
-        <p>Editar Departamento</p>
-        <div class="codigophp">
-            <form name="ejercicio21" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <input type="submit" id="volver" name="volver" value="Volver">
-            </form>
+        <div class="general">
+            <div class="cuadroIzquierdo">
+                <h2><span>Editar</span> un departamento es simple y sencillo.</h2>
+            </div>
+            <div class="codigophp">
+                <h1>Editar Departamento</h1>
+                <form name="ejercicio21" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <table class="formulario">
+                        <tr>
+                            <td><label for="codigo">Código:</label></td>
+                            <td><input type="text" name="codigo" value="<?php echo $aDepartamento['codigo']; ?>" readonly="true" style="background-color: gray;" class="entradadatos"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="descripcion">Descripción:</label></td>
+                            <td><input type="text" name="descripcion" value="<?php echo $aDepartamento['descripcion']; ?>" style="background: lightyellow" class="entradadatos"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['descripcion'] . '</span>' . "<br><br>"; ?></td>
+                        </tr>
+                        <tr>
+                            <td><label for="volumen">Volumen de Negocio:</label></td>
+                            <td><input type="text" name="volumen" value="<?php echo $aDepartamento['volumen']; ?>" style="background: lightyellow" class="entradadatos"/></td>
+                            <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['volumenNegocio'] . '</span>' . "<br><br>"; ?></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" id="aceptar" value="Aceptar" name="aceptar">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" id="cancelar" name="cancelar" value="Cancelar">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         </div>
     </body>
 </html>

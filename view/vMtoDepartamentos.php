@@ -146,7 +146,7 @@
                                     <td><?php echo $departamentoEnCurso['fechaCreacionDepartamento']; ?></td>
                                     <td><?php echo $departamentoEnCurso['volumenDeNegocio']; ?></td>
                                     <td><?php echo $departamentoEnCurso['fechaBajaDepartamento']; ?></td>
-                                    <td><button type="submit" value="<?php echo $departamentoEnCurso['codDepartamento']; ?>" name="editar">Editar</button></td>
+                                    <td><button type="submit" value="<?php echo $departamentoEnCurso['codDepartamento']; ?>" name="editar" id="editar">Editar</button></td>
                                 </tr>
                                 <?php
                             }
