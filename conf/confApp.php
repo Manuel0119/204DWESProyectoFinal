@@ -36,7 +36,8 @@ $aControladores=[
     "borrarCuenta"=>"controller/cBorrarCuenta.php",
     "rest"=>"controller/cREST.php",
     "mantenimiento"=>"controller/cMtoDepartamentos.php",
-    "tecnologias"=>"controller/cTecnologias.php"
+    "tecnologias"=>"controller/cTecnologias.php",
+    "editarDepartamento"=>"controller/cEditarDepartamento.php"
 ];
 
 //Array de las vistas
@@ -54,6 +55,7 @@ $aVistas=[
     "borrarCuenta"=>"view/vBorrarCuenta.php",
     "rest"=>"view/vREST.php",
     "mantenimiento"=>"view/vMtoDepartamentos.php",
-    "tecnologias"=>"view/vTecnologias.php"
+    "tecnologias"=>"view/vTecnologias.php",
+    "editarDepartamento"=>"view/vEditarDepartamento.php"
 ];
 ?>

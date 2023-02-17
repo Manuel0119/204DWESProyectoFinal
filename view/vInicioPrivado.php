@@ -45,25 +45,24 @@
             .formulario{
                 position: absolute;
                 background: #bbbbbb;
-                right: 5px;
-                top: 8rem;
+                display: none;
+                top: 9.5rem;
                 border-radius: 1rem;
             }
             .imgUsuario{
                 position: absolute;
                 top: 4.5rem;
-                right: 3rem;
-                width: 3rem;
-                height: 3rem;
+                right: 1rem;
+                width: 4rem;
+                height: 4rem;
                 cursor: pointer;
+                border: 4px solid limegreen;
+                border-radius: 50%;
             }
             form{
                 transition: all 0.5s ease;
             }
         </style>
-        <script>
-            
-        </script>
     </head>
     <body>
         <table>
@@ -82,21 +81,21 @@
                     if ($_SESSION['User204DWESProyectoFinal']->getNumConexiones() > 1) {
                         echo"Último inicio de sesión: " . $_SESSION['User204DWESProyectoFinal']->getFechaHoraUltimaConexionAnterior();
                         ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    //Mostramos el numero de conexiones
-                    echo"Te has conectado " . $_SESSION['User204DWESProyectoFinal']->getNumConexiones() . " veces";
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <?php
+                        //Mostramos el numero de conexiones
+                        echo"Te has conectado " . $_SESSION['User204DWESProyectoFinal']->getNumConexiones() . " veces";
                     } else {
-                    ?> 
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    echo 'Es la primera vez que te conectas';
+                        ?> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <?php
+                        echo 'Es la primera vez que te conectas';
                     }
                     ?>
                 </td>
@@ -123,8 +122,25 @@
                 <tr>
                     <td colspan="2"><input type="submit" id="rest" value="REST" name="rest"></td>
                 </tr> 
-                
+
             </table>
         </form>
+        <script>
+            let imagen = document.getElementsByClassName("imgUsuario")[0];
+            let tablaMenuLateral = document.getElementsByClassName("formulario")[0];
+
+            imagen.addEventListener('click', desplegarMenuLateral);
+            function desplegarMenuLateral() {
+                if (tablaMenuLateral.style.display == 'block') {
+                    tablaMenuLateral.style.right = '-100%';
+                    tablaMenuLateral.style.display = 'none';
+                } else {
+                    tablaMenuLateral.style.right = '5px';
+                    tablaMenuLateral.style.display = 'block';
+                    tablaMenuLateral.style.transition = 'transform 0.4s ease-out';
+                }
+            }
+            ;
+        </script>
     </body>
 </html>

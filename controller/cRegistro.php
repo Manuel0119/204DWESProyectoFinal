@@ -14,14 +14,14 @@ if (isset($_REQUEST['volver'])) {
     header('Location: index.php');
     exit();
 }
+$aErrores = [
+    'usuario' => null,
+    'password' => null,
+    'repeatPassword' => null,
+    'descripcion' => null
+];
 if (isset($_REQUEST['registro'])) {
     $entradaOk = true;
-    $aErrores = [
-        'usuario' => null,
-        'password' => null,
-        'repeatPassword' => null,
-        'descripcion' => null
-    ];
     $miDB = new PDO(DSN, USER, PASSWORD);
     //Comprobamos que el usuario no haya introducido inyeccion de codigo y los datos están correctos
     $aErrores['usuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'], 8, 4, OBLIGATORIO);
