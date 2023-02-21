@@ -8,7 +8,6 @@
  */
 
 /**
- * 
  * Clase DepartamentoPDO
  * 
  * Clase DepartamentoPDO que contiene funciones para consultar o modificar los departamentos ya existentes
@@ -25,7 +24,6 @@
 class DepartamentoPDO {
 
     /**
-     * 
      * Funcion buscarDepartamentoPorDescripcion
      * 
      * Funcion que busca un departamento mediante la descripción del departamento
@@ -37,7 +35,7 @@ class DepartamentoPDO {
      * @since 24-01-2023
      * @param string $descDepartamento Descripción del departamento a buscar
      * @access public
-     * @return array Array con los departamentos encontrados 
+     * @return array Array con los departamentos encontrados
      */
     public static function buscarDepartamentoPorDescripcion($descDepartamento) {
         $aDepartamento = [];
@@ -59,7 +57,6 @@ class DepartamentoPDO {
     }
 
     /**
-     * 
      * Funcion buscarDepartamentoPorCodigo
      * 
      * Funcion que busca un departamento mediante el codigo del departamento
@@ -92,7 +89,6 @@ class DepartamentoPDO {
     }
 
     /**
-     * 
      * Funcion modificarDepartamento
      * 
      * Funcion que modifica un departamento pasandole el codigo, la descripcion y el volumen de negocio del departamento
@@ -115,7 +111,6 @@ class DepartamentoPDO {
     }
     
     /**
-     * 
      * Funcion borrarDepartamento
      * 
      * Funcion que elimina un departamento pasandole el codigo del departamento

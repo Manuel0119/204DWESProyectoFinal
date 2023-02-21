@@ -119,11 +119,17 @@
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['volumenNegocio'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
+                            <td><label for="fechaAlta">Fecha Alta:</label></td>
+                            <td><input type="text" name="fechaAlta" value="<?php echo $aDepartamento['fechaAlta']; ?>" readonly="true" style="background-color: gray;" class="entradadatos"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fechaBaja">Fecha Baja:</label></td>
+                            <td><input type="text" name="fechaBaja" value="<?php echo $aDepartamento['fechaBaja']; ?>" readonly="true" style="background-color: gray;" class="entradadatos"/></td>
+                        </tr>
+                        <tr>
                             <td colspan="2">
                                 <input type="submit" id="aceptar" value="Aceptar" name="aceptar">
                             </td>
-                        </tr>
-                        <tr>
                             <td colspan="2">
                                 <input type="submit" id="cancelar" name="cancelar" value="Cancelar">
                             </td>

@@ -7,11 +7,11 @@
  *
  * PHP version 8.1
  */
+
 /**
- * 
  * Clase DBPDO
  * 
- * Clase DBPDO que contiene la función ejecutar consulta con la sentencia SQL y los diferentes parámetros como parámetros de la función
+ * Clase DBPDO que contiene la función ejecutar consulta con la sentencia SQL y los diferentes parámetros como parámetros de la función. Además, implementa la interfaz DB
  * 
  * @author Manuel Martín Alonso
  * @since: 05-02-2023 Se han mejorado los comentarios de la clase DBPDO
@@ -20,17 +20,15 @@
  * @copyright 2022-2023 Manuel Martín Alonso
  * @version 1.0
  * 
- * 
  */
 require_once 'conf/confDBPDO.php';
 
 class DBPDO implements DB {
 
     /**
-     * 
      * Funcion ejecutarConsulta
      * 
-     * Funcion que ejecuta las sentencias SQL y devuelve el resultado.
+     * Funcion que ejecuta las sentencias SQL y devuelve el resultado
      * 
      * @author Manuel Martín Alonso
      * @version 1.0

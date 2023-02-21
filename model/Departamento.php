@@ -9,7 +9,6 @@
  */
 
 /**
- * 
  * Clase Departamento
  * 
  * Clase Departamento para crear objetos de tipo Departamento
@@ -20,7 +19,6 @@
  * @since: 02-02-2023
  * @copyright 2022-2023 Manuel Martín Alonso
  * @version 1.0
- * 
  * 
  */
 class Departamento {
@@ -56,7 +54,6 @@ class Departamento {
     private $fechaBajaDepartamento;
 
     /**
-     * 
      * Funcion __construct
      * 
      * Funcion que inicializa los atributos declarados
@@ -66,9 +63,9 @@ class Departamento {
      * @since: 02-02-2023
      * @param string $codDepartamento Código del Departamento
      * @param string $descDepartamento Descripción del Departamento
-     * @param dateTime $fechaCreacionDepartamento Fecha de creación del Departamento
+     * @param DateTime $fechaCreacionDepartamento Fecha de creación del Departamento
      * @param float $volumenNegocio Volumen de negocio del Departamento
-     * @param datetime $fechaBajaDepartamento Fecha de baja del Departamento
+     * @param Datetime $fechaBajaDepartamento Fecha de baja del Departamento
      */
     function __construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenNegocio, $fechaBajaDepartamento) {
         $this->codDepartamento = $codDepartamento;
@@ -79,7 +76,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion getCodDepartamento
      * 
      * Funcion que devuelve el código del departamento
@@ -94,7 +90,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion getDescDepartamento
      * 
      * Funcion que devuelve la descripción del departamento
@@ -109,7 +104,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion getFechaCreacionDepartamento
      * 
      * Funcion que devuelve la fecha de creación del departamento
@@ -124,7 +118,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion getVolumenNegocio
      * 
      * Funcion que devuelve el volumen de negocio del departamento
@@ -139,7 +132,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion getFechaBajaDepartamento
      * 
      * Funcion que devuelve la fecha de baja del departamento si dicho departamento ha sido dado de baja
@@ -154,7 +146,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion setCodDepartamento
      * 
      * Funcion que establece el nuevo código del departamento
@@ -169,7 +160,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion setDescDepartamento
      * 
      * Funcion que establece la nueva descripción del departamento
@@ -184,7 +174,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion setFechaCreacionDepartamento
      * 
      * Funcion que establece la fecha de alta o de rehabilitacion del departamento
@@ -199,7 +188,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion setVolumenNegocio
      * 
      * Funcion que establece el volumen de negocio del departamento
@@ -214,7 +202,6 @@ class Departamento {
     }
 
     /**
-     * 
      * Funcion setFechaBajaDepartamento
      * 
      * Funcion que establece la fecha de la ultima baja logica del departamento
