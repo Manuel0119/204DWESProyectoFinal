@@ -60,7 +60,7 @@ if ($aDepartamentos) {
     }
 }
 if (isset($_REQUEST['editar'])) {
-    $_SESSION['departamentoEnCurso'] = DepartamentoPDO::buscarDepartamentoPorCodigo($_REQUEST['editar']);
+    $_SESSION['codDepartamentoEnCurso'] = $_REQUEST['editar'];
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'editarDepartamento';
     header("Location:index.php");

@@ -61,12 +61,26 @@
                 flex-grow: 1;
                 font-size: 1rem;
                 height: 2rem;
-                order: 3;
                 outline: none;
                 overflow: hidden;
                 padding: 0;
                 padding-inline-end: .5rem;
                 padding-inline-start: .5rem;
+            }
+            tbody{
+                gap: 0;
+            }
+            td{
+                font-size: 1.5rem;
+            }
+            tr{
+                padding: 10px;
+            }
+            tr,td{
+                width: 100%;
+                display: flex;
+                align-items: baseline;
+                flex-wrap: nowrap;
             }
             span{
                 color: #6CD7BD;
@@ -74,6 +88,9 @@
             #parrafoIntruccion{
                 color: white;
                 font-size: large;
+            }
+            input{
+                width: auto;
             }
             input[type="submit"]{
                 align-items: center;
@@ -102,28 +119,34 @@
             </div>
             <div class="codigophp">
                 <h1>Editar Departamento</h1>
-                <form name="ejercicio21" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <table class="formulario">
                         <tr>
                             <td><label for="codigo">Código:</label></td>
-                            <td><input type="text" name="codigo" value="<?php echo $aDepartamento['codigo']; ?>" readonly="true" style="background-color: gray;" class="entradadatos"/></td>
+                            <td><input type="text" name="codigo" value="<?php echo $aVEditarDepartamento['codigo']; ?>" readonly="true" style="background-color: gray;" class="entradadatos"/></td>
                         </tr>
                         <tr>
                             <td><label for="descripcion">Descripción:</label></td>
-                            <td><input type="text" name="descripcion" value="<?php echo $aDepartamento['descripcion']; ?>" style="background: lightyellow" class="entradadatos"/></td>
+                            <td><input type="text" name="descripcion" value="<?php echo $aVEditarDepartamento['descripcion']; ?>" style="background: lightyellow" class="entradadatos"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['descripcion'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="volumen">Volumen de Negocio:</label></td>
-                            <td><input type="text" name="volumen" value="<?php echo $aDepartamento['volumen']; ?>" style="background: lightyellow" class="entradadatos"/></td>
+                            <td><input type="text" name="volumen" value="<?php echo $aVEditarDepartamento['volumen']; ?>" style="background: lightyellow" class="entradadatos"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['volumenNegocio'] . '</span>' . "<br><br>"; ?></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fechaAlta">Fecha Alta:</label></td>
+                            <td><input type="text" name="fechaAlta" value="<?php echo $aVEditarDepartamento['fechaAlta']; ?>" readonly="true" style="background-color: gray;" class="entradadatos"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fechaBaja">Fecha Baja:</label></td>
+                            <td><input type="text" name="fechaBaja" value="<?php echo $aVEditarDepartamento['fechaBaja']; ?>" readonly="true" style="background-color: gray;" class="entradadatos"/></td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <input type="submit" id="aceptar" value="Aceptar" name="aceptar">
                             </td>
-                        </tr>
-                        <tr>
                             <td colspan="2">
                                 <input type="submit" id="cancelar" name="cancelar" value="Cancelar">
                             </td>
