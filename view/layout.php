@@ -57,7 +57,9 @@
                 -webkit-text-stroke-color: #2314eb;
                 -webkit-text-stroke-width: 0.2px;
             }
-
+            a{
+                color: white;
+            }
             #numeros {
                 display: flex;
                 align-items: center;
@@ -92,13 +94,14 @@
             <div><a target="_blank" href="../../204DWESProyectoDAW/index.html"><img style="padding: 0em 1em;" src="webroot/media/logo_propio.png" alt="logo" id="logo"></a></div>
             2022-23 Manuel Martín Alonso. ©Todos los derechos reservados.
             <a href="https://github.com/Manuel0119/204DWESProyectoFinal" target="_blank"><img src="webroot/media/github-logo.png" alt="github" id="g"></a>
-            <a href="doc/CV - Manuel Martín Alonso.pdf" target="_blank"><img src="webroot/media/curriculum-logo.png" alt="curriculum" id="curricu"></a>
+            <a href="doc/Curriculum Vitae - Manuel Martín Alonso.pdf" target="_blank"><img src="webroot/media/curriculum-logo.png" alt="curriculum" id="curricu"></a>
             <a href="https://www.ikea.com/es/es/" target="_blank" style="color: white;">Página a imitar: "Ikea"</a>
             <?php if ($_SESSION['paginaEnCurso'] != 'tecnologias' && $_SESSION['paginaEnCurso'] != 'wip') { ?>
                 <form method="post">
                     <button type="submit" id="tecnologias" name="tecnologias" value="Tecnologías">Tecnologías</button>
                 </form>
             <?php } ?>
+            <div><a target="_blank" href="doc/phpdoc/index.html">DocumentacionPHP</a></div>
         </footer>
     </body>
 </html>

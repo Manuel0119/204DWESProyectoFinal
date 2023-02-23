@@ -7,11 +7,11 @@
  * Última modificación: 21-02-2023
  */
 $oDepartamento= DepartamentoPDO::buscarDepartamentoPorCodigo($_SESSION['codDepartamentoEnCurso']);//Buscamos el departamento especificado por el codigo en la base de datos y lo devolvemos como un objeto de la clase departamento.
-$aDepartamento = [//Recogemos los datos del objeto departamento y los introducimos en el array
+$aVEditarDepartamento = [//Recogemos los datos del objeto departamento y los introducimos en el array
     'codigo' => $oDepartamento->getCodDepartamento(),
     'descripcion' => $oDepartamento->getDescDepartamento(),
     'volumen' => $oDepartamento->getVolumenNegocio(),
-    'fechaAlta' => $oDepartamento->getFechaCreacionDepartamento()->format('Y-m-d H:i:s'),
+    'fechaAlta' => $oDepartamento->getFechaCreacionDepartamento()->format('Y-m-d'),
     'fechaBaja' => $oDepartamento->getFechaBajaDepartamento()
 ];
 $aErrores = [
