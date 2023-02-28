@@ -91,22 +91,22 @@
                     <table class="formulario">
                         <tr>
                             <td><label for="usuario">Usuario:</label></td>
-                            <td><input style="background: lightyellow" type="text" name="usuario" class="entradadatos" value="<?php echo $_REQUEST['usuario'] ?? ''?>"/></td>
+                            <td><input style="background: lightyellow; border: 1px solid red" type="text" name="usuario" id="usuario" class="entradadatos" value="<?php echo $_REQUEST['usuario'] ?? ''?>"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['usuario'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="password">Contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="password" class="entradadatos" value="<?php echo $_REQUEST['password'] ?? ''?>"/></td>
+                            <td><input style="background: lightyellow" type="password" name="password" class="entradadatos password" value="<?php echo $_REQUEST['password'] ?? ''?>"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['password'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="password">Vuelva a introducir la contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos"/></td>
+                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos password"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['repeatPassword'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="password">Descripción:</label></td>
-                            <td><input style="background: lightyellow" type="text" name="descripcion" class="entradadatos" value="<?php echo $_REQUEST['descripcion'] ?? ''?>"/></td>
+                            <td><input style="background: lightyellow" type="text" name="descripcion" id="descripcion" class="entradadatos" value="<?php echo $_REQUEST['descripcion'] ?? ''?>"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['descripcion'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
@@ -121,5 +121,6 @@
                 </form>
             </div>
         </div>
+        <script defer src="webroot/js/controlRegistro.js"></script>
     </body>
 </html>
