@@ -91,7 +91,7 @@
             <?php require_once $aVistas[$_SESSION['paginaEnCurso']]; ?>
         </div>
         <footer>
-            <div><a target="_blank" href="../../204DWESProyectoDAW/index.html"><img style="padding: 0em 1em;" src="webroot/media/logo_propio.png" alt="logo" id="logo"></a></div>
+            <div><a target="_blank" href="../../../index.html"><img style="padding: 0em 1em;" src="webroot/media/logo_propio.png" alt="logo" id="logo"></a></div>
             2022-23 Manuel Martín Alonso. ©Todos los derechos reservados.
             <a href="https://github.com/Manuel0119/204DWESProyectoFinal" target="_blank"><img src="webroot/media/github-logo.png" alt="github" id="g"></a>
             <a href="doc/Curriculum Vitae - Manuel Martín Alonso.pdf" target="_blank"><img src="webroot/media/curriculum-logo.png" alt="curriculum" id="curricu"></a>

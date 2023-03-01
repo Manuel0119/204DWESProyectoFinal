@@ -4,7 +4,7 @@
  * Fichero de configuración que contiene la configuración de la aplicación.
  * @author Manuel Martín Alonso
  * @since:  24-01-2023
- * Última modificación: 22-02-2023
+ * Última modificación: 28-02-2023
  */
 
 require_once 'core/221024ValidacionFormularios.php';
