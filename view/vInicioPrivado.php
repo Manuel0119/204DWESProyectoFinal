@@ -118,7 +118,16 @@
                 </tr> 
                 <tr>
                     <td colspan="2"><input type="submit" id="mant_departamentos" value="Mto.Departamentos" name="mant_departamentos"></td>
-                </tr> 
+                </tr>
+                <?php
+                if ($_SESSION['User204DWESProyectoFinal']->getPerfil()=='administrador') {
+                    ?>
+                    <tr>
+                        <td colspan="2"><input type="submit" id="mant_usuarios" value="Mto.Usuarios" name="mant_usuarios"></td>
+                    </tr>
+                    <?php
+                }
+                ?>
                 <tr>
                     <td colspan="2"><input type="submit" id="rest" value="REST" name="rest"></td>
                 </tr> 

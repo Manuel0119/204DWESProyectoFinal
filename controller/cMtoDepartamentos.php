@@ -4,7 +4,7 @@
  * Fichero que contiene el controlador de la gestión del mantenimiento de departamentos.
  * @author Manuel Martín Alonso
  * @since: 03-02-2023
- * Última modificación: 05-02-2023
+ * Última modificación: 23-02-2023
  */
 if (!isset($_SESSION['criterioBusquedaDepartamento'])) {
     $_SESSION['criterioBusquedaDepartamento'] = '';
@@ -64,6 +64,13 @@ if (isset($_REQUEST['editar'])) {
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'editarDepartamento';
     header("Location:index.php");
+    exit;
+}
+if (isset($_REQUEST['borrar'])) {
+    $_SESSION['codDepartamentoEnCurso'] = $_REQUEST['borrar'];
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'borrarDepartamento';
+    header('Location: index.php');
     exit;
 }
 require_once $aVistas['layout'];

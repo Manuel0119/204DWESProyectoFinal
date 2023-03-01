@@ -4,7 +4,7 @@
  * Fichero de configuración que contiene la configuración de la aplicación.
  * @author Manuel Martín Alonso
  * @since:  24-01-2023
- * Última modificación: 22-02-2023
+ * Última modificación: 28-02-2023
  */
 
 require_once 'core/221024ValidacionFormularios.php';
@@ -38,7 +38,8 @@ $aControladores=[
     "mantenimiento"=>"controller/cMtoDepartamentos.php",
     "tecnologias"=>"controller/cTecnologias.php",
     "editarDepartamento"=>"controller/cEditarDepartamento.php",
-    "borrarDepartamento"=>"controller/cBorrarDepartamento.php"
+    "borrarDepartamento"=>"controller/cBorrarDepartamento.php",
+    "mantenimientoUsuarios"=>"controller/cMtoUsuarios.php"
 ];
 
 //Array de las vistas
@@ -58,6 +59,7 @@ $aVistas=[
     "mantenimiento"=>"view/vMtoDepartamentos.php",
     "tecnologias"=>"view/vTecnologias.php",
     "editarDepartamento"=>"view/vEditarDepartamento.php",
-    "borrarDepartamento"=>"view/vBorrarDepartamento.php"
+    "borrarDepartamento"=>"view/vBorrarDepartamento.php",
+    "mantenimientoUsuarios"=>"view/vMtoUsuarios.php"
 ];
 ?>

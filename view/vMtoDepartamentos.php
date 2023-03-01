@@ -3,7 +3,7 @@
     <!--
         Autor: Manuel Martín Alonso.
         Utilidad: Este programa consiste en crear una ventana de mantenimiento de departamentos.
-        Fecha-última-revisión: 05-02-2023.
+        Fecha-última-revisión: 23-02-2023.
     -->
     <head>
         <meta charset="UTF-8">
@@ -146,7 +146,10 @@
                                     <td><?php echo $departamentoEnCurso['fechaCreacionDepartamento']; ?></td>
                                     <td><?php echo $departamentoEnCurso['volumenDeNegocio']; ?></td>
                                     <td><?php echo $departamentoEnCurso['fechaBajaDepartamento']; ?></td>
-                                    <td><button type="submit" value="<?php echo $departamentoEnCurso['codDepartamento']; ?>" name="editar" id="editar">Editar</button></td>
+                                    <td>
+                                        <button type="submit" value="<?php echo $departamentoEnCurso['codDepartamento']; ?>" name="editar" id="editar">Editar</button>
+                                        <button type="submit" value="<?php echo $departamentoEnCurso['codDepartamento']; ?>" name="borrar" id="borrar">Borrar</button>
+                                    </td>
                                 </tr>
                                 <?php
                             }
