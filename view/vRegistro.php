@@ -3,7 +3,7 @@
     <!--
         Autor: Manuel Martín Alonso.
         Utilidad: Este programa consiste en crear una ventana de registro.
-        Fecha-última-revisión: 05-02-2023.
+        Fecha-última-revisión: 02-03-2023.
     -->
     <head>
         <meta charset="UTF-8">
@@ -96,16 +96,16 @@
                         </tr>
                         <tr>
                             <td><label for="password">Contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="password" class="entradadatos password" value="<?php echo $_REQUEST['password'] ?? ''?>"/></td>
+                            <td><input style="background: lightyellow" type="password" name="password" id="password" class="entradadatos password" value="<?php echo $_REQUEST['password'] ?? ''?>"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['password'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
-                            <td><label for="password">Vuelva a introducir la contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos password"/></td>
+                            <td><label for="repeatPassword">Vuelva a introducir la contraseña:</label></td>
+                            <td><input style="background: lightyellow" type="password" name="repeatPassword" id="repeatPassword" class="entradadatos password"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['repeatPassword'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
-                            <td><label for="password">Descripción:</label></td>
+                            <td><label for="descripcion">Descripción:</label></td>
                             <td><input style="background: lightyellow" type="text" name="descripcion" id="descripcion" class="entradadatos" value="<?php echo $_REQUEST['descripcion'] ?? ''?>"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['descripcion'] . '</span>' . "<br><br>"; ?></td>
                         </tr>

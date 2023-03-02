@@ -3,7 +3,7 @@
     <!--
         Autor: Manuel Martín Alonso.
         Utilidad: Este programa consiste en crear una ventana de inicio público.
-        Fecha-última-revisión: 11-02-2023.
+        Fecha-última-revisión: 02-03-2023.
     -->
     <head>
         <meta charset="UTF-8">
@@ -11,8 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MMA - Proyecto Final</title>
         <link href="webroot/css/estilos-carrusel.css" rel="stylesheet" type="text/css"/>
-        <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico"> 
-        <script defer src="webroot/js/carrusel.js" type="text/javascript"></script>
+        <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico">
     </head>
     <body>
         <form method="post">
@@ -68,5 +67,6 @@
                 <div class="punto"></div>
             </section>
         </div>
+        <script defer src="webroot/js/carrusel.js" type="text/javascript"></script>
     </body>
 </html>
