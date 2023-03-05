@@ -20,9 +20,8 @@ $aErrores = [
     'repeatPassword' => null,
     'descripcion' => null
 ];
-if (isset($_REQUEST['registro'])) {
+if (isset($_REQUEST['registro']) || !empty($_POST) == true) {
     $entradaOk = true;
-    $miDB = new PDO(DSN, USER, PASSWORD);
     //Comprobamos que el usuario no haya introducido inyeccion de codigo y los datos están correctos
     $aErrores['usuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'], 8, 4, OBLIGATORIO);
     $aErrores['password'] = validacionFormularios::validarPassword($_REQUEST['password'], 8, 4, 1, OBLIGATORIO);
@@ -38,8 +37,8 @@ if (isset($_REQUEST['registro'])) {
         $aErrores['password'] = "Contraseña No Coinciden";
         $aErrores['repeatPassword'] = "Contraseña No Coinciden";
     }
-    if (UsuarioPDO::validarCodNoExiste($_REQUEST['usuario'])==false) {
-        $aErrores['usuario']='Codigo ya existe';
+    if (UsuarioPDO::validarCodNoExiste($_REQUEST['usuario']) == false) {
+        $aErrores['usuario'] = 'Codigo ya existe';
         $entradaOk = false;
     }
     if ($_REQUEST['password'] == $_REQUEST['repeatPassword'] && $entradaOk) {
