@@ -3,7 +3,7 @@
     <!--
         Autor: Manuel Martín Alonso.
         Utilidad: Este programa consiste en crear una ventana de registro.
-        Fecha-última-revisión: 05-02-2023.
+        Fecha-última-revisión: 02-03-2023.
     -->
     <head>
         <meta charset="UTF-8">
@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MMA - Proyecto Final - Registro</title>
         <link rel="icon" type="image/ico" sizes="32x32" href="webroot/media/favicon.ico">
+        <link href="webroot/css/estilosRegistro.css" rel="stylesheet" type="text/css"/>
         <style>
             h2{
                 font-size: 32px;
@@ -87,26 +88,26 @@
         <div class="general">
             <div class="form_registro">
                 <h1>Registro</h1>
-                <form name="registro" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <form name="registro" id="formularioRegistro" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <table class="formulario">
                         <tr>
                             <td><label for="usuario">Usuario:</label></td>
-                            <td><input style="background: lightyellow; border: 1px solid red" type="text" name="usuario" id="usuario" class="entradadatos" value="<?php echo $_REQUEST['usuario'] ?? ''?>"/></td>
+                            <td><input type="text" style="background: lightyellow" name="usuario" id="usuario" class="entradadatos error"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['usuario'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
                             <td><label for="password">Contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="password" class="entradadatos password" value="<?php echo $_REQUEST['password'] ?? ''?>"/></td>
+                            <td><input type="password" style="background: lightyellow" name="password" id="password" class="entradadatos error"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['password'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
-                            <td><label for="password">Vuelva a introducir la contraseña:</label></td>
-                            <td><input style="background: lightyellow" type="password" name="repeatPassword" class="entradadatos password"/></td>
+                            <td><label for="repeatPassword">Vuelva a introducir la contraseña:</label></td>
+                            <td><input type="password" style="background: lightyellow" name="repeatPassword" id="repeatPassword" class="entradadatos error"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['repeatPassword'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
-                            <td><label for="password">Descripción:</label></td>
-                            <td><input style="background: lightyellow" type="text" name="descripcion" id="descripcion" class="entradadatos" value="<?php echo $_REQUEST['descripcion'] ?? ''?>"/></td>
+                            <td><label for="descripcion">Descripción:</label></td>
+                            <td><input style="background: lightyellow" type="text" name="descripcion" id="descripcion" class="entradadatos error"/></td>
                             <td style="width: auto;"><?php echo '<span style="color: red;">' . $aErrores['descripcion'] . '</span>' . "<br><br>"; ?></td>
                         </tr>
                         <tr>
@@ -119,6 +120,18 @@
                         </tr>
                     </table>
                 </form>
+            </div>
+            <div id="captcha" class="captcha">
+                <p>DEMUESTRA QUE NO ERES UN ROBOT:</p>
+                <div id="num1" class="cuestion"></div>
+                <div class="cuestion">+</div>
+                <div id="num2" class="cuestion"></div>
+                <div class="cuestion">=</div>
+                <div class="cuestion resultado"></div>
+
+                <div id="sol1" class="opcaptcha"></div>
+                <div id="sol2" class="opcaptcha"></div>
+                <div id="sol3" class="opcaptcha"></div>
             </div>
         </div>
         <script defer src="webroot/js/controlRegistro.js"></script>

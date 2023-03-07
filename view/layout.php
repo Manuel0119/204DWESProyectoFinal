@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <!--
-        Autor: Manuel Martín Alonso.
-        Utilidad: Este programa consiste en crear un layout.
-        Fecha-última-revisión: 21-02-2023.
+        Autor: Manuel Martín Alonso
+        Utilidad: Este programa consiste en crear un layout
+        Fecha-última-revisión: 02-03-2023
     -->
     <head>
         <meta charset="UTF-8">
@@ -75,10 +75,8 @@
                 font-size: larger;
                 border: none;
                 cursor: pointer;
-
             }
         </style>
-        <script defer src="webroot/js/Reloj.js"></script>
     </head>
     <body>
         <header>
@@ -91,7 +89,7 @@
             <?php require_once $aVistas[$_SESSION['paginaEnCurso']]; ?>
         </div>
         <footer>
-            <div><a target="_blank" href="../../../index.html"><img style="padding: 0em 1em;" src="webroot/media/logo_propio.png" alt="logo" id="logo"></a></div>
+            <a target="_blank" href="../../../index.html"><img style="padding: 0em 1em;" src="webroot/media/logo_propio.png" alt="logo" id="logo"></a>
             2022-23 Manuel Martín Alonso. ©Todos los derechos reservados.
             <a href="https://github.com/Manuel0119/204DWESProyectoFinal" target="_blank"><img src="webroot/media/github-logo.png" alt="github" id="g"></a>
             <a href="doc/Curriculum Vitae - Manuel Martín Alonso.pdf" target="_blank"><img src="webroot/media/curriculum-logo.png" alt="curriculum" id="curricu"></a>
@@ -101,7 +99,8 @@
                     <button type="submit" id="tecnologias" name="tecnologias" value="Tecnologías">Tecnologías</button>
                 </form>
             <?php } ?>
-            <div><a target="_blank" href="doc/phpdoc/index.html">DocumentacionPHP</a></div>
+            <a target="_blank" href="doc/phpdoc/index.html">DocumentacionPHP</a>
         </footer>
+        <script defer src="webroot/js/Reloj.js"></script>
     </body>
 </html>

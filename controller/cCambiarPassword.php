@@ -4,7 +4,7 @@
  * Fichero que contiene el controlador de la gestión de las contraseñas de la aplicación.
  * @author Manuel Martín Alonso
  * @since: 05-02-2023
- * Última modificación: 05-02-2023
+ * Última modificación: 02-03-2023
  */
 
 if (isset($_REQUEST['cancelar'])) {
@@ -29,9 +29,14 @@ if (isset($_REQUEST['aceptar'])) {
             $entradaOk = false;
         }
     }
-    if (hash('sha256', $_SESSION['User204DWESProyectoFinal']->getCodUsuario() . $_REQUEST['previewPassword']) != $_SESSION['User204DWESProyectoFinal']->getPassword() && !empty($_REQUEST['previewPassword']) || $_REQUEST['newPassword'] != $_REQUEST['RnewPassword']) {
+    if (hash('sha256', $_SESSION['User204DWESProyectoFinal']->getCodUsuario() . $_REQUEST['previewPassword']) != $_SESSION['User204DWESProyectoFinal']->getPassword()) {
+            $entradaOk = false;
+            $aErrores['previewPassword'] = "Contraseña Incorrecta";
+        }
+    if ($_REQUEST['newPassword'] != $_REQUEST['RnewPassword']) {
         $entradaOk = false;
-        $aErrores['previewPassword']="Contraseña Incorrecta";
+        $aErrores['RnewPassword'] = "Contraseña No Coinciden";
+        $aErrores['newPassword'] = "Contraseña No Coinciden";
     }
     if ($entradaOk) {
         $password = hash('sha256', ($_SESSION['User204DWESProyectoFinal']->getCodUsuario() . $_REQUEST['newPassword']));
